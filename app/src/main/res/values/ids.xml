@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="checkBeer" type="id" />
+    <item name="Button" type="id" />
+    <item name="sv_location" type="id" />
+</resources>

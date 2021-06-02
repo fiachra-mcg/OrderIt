@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">OrderIt</string>
+    <string name="map_key" translatable="false">AIzaSyAStfWRCPMteUTTkHEWjR93RvpINBwGZ2k</string>
+    <string name="button">Button</string>
+    <string name="beer">Beer</string>
+    <string name="menu">Menu </string>
+    <string name="diceys">Dicey\'s Garden Club</string>
+    <string name="the_temple_bar">The Temple Bar</string>
+    <string name="dunness_bar">Dunnes Bar</string>
+    <string name="carrolls">Carrolls</string>
+    <string name="devitts_pub">Devitts Pub</string>
+    <string name="coke">Coke</string>
+    <string name="marker_title">Marker Title</string>
+    <string name="drinks">Drinks</string>
+    <string name="wine">Wine</string>
+    <string name="reserve">Book a Table</string>
+    <string name="bars_restaurants">Bars/Restaurants</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="starters">Starters</string>
+    <string name="soup">Soup</string>
+    <string name="chicken_wings">Chicken Wings</string>
+    <string name="main_course">Main Course</string>
+    <string name="salad">Salad</string>
+    <string name="chicken_curry">Chicken Curry</string>
+    <string name="steak">Steak</string>
+    <string name="lasagna">Lasagna</string>
+    <string name="dessert">Dessert</string>
+    <string name="cheese_cake">Cheese Cake</string>
+    <string name="chocolate_brownie">Chocolate Brownie</string>
+    <string name="ice_cream">Ice-Cream</string>
+
+    <string name="_1">1</string>
+    <string name="_5">€5</string>
+    <string name="_3">€3</string>
+    <string name="todo">TODO</string>
+    <string name="googlepay_button_content_description">Google Pay</string>
+    <string name="buy_with_googlepay_button_content_description">Buy with Google Pay</string>
+    <string name="Payment">Payment</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="payment">Payment</string>
+    <string name="table_number">Table Number…</string>
+    <string name="_6">€6</string>
+    <string name="_8">€8</string>
+    <string name="_7">€7</string>
+    <string name="_10">€10</string>
+    <string name="clear_cart">Clear Cart</string>
+    <string name="party_size">Party size</string>
+    <string name="choose_date">Choose Date</string>
+    <string name="atleast">*Must make reservation at least 24 hours in advance</string>
+    <string name="pick_a_time">Pick a time</string>
+    <string name="request_reservation">Request Reservation</string>
+    <string name="name">Name</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="card_number">Card Number</string>
+    <string name="expiry_mm_yy">Expiry (MM/YY)</string>
+    <string name="cvc">CVC</string>
+    <string name="cardholder_name">Cardholder Name</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="checkout">Checkout</string>
+    <string name="see_what_s_nearby">See what\'s nearby</string>
+    <string name="order_now">Order now</string>
+    <string name="logo">Logo</string>
+    <string name="book_table">Book Table</string>
+    <string name="service_now">Service Now</string>
+    <string name="map">Map</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="make_reservation">Reservations</string>
+    <string name="euro_sign">Euro Sign</string>
+    <string name="email">Email</string>
+    <string name="select_bar_restaurant">Select Bar/Restaurant</string>
+    <string name="where_s_busy">Where\'s Busy?</string>
+    <string name="diceys1">Diceys</string>
+    <string name="temple_bar">Temple Bar</string>
+    <string name="see_where_s_busy">See Where\'s busy</string>
+    <string name="check">Agree to data storage for up to 30 days (for customer trend analytics) by ticking this box</string>
+    <string name="pay">Pay Now</string>
+    <string name="please_select_a_date">Please select a date</string>
+    <string name="reservation">reservation</string>
+    <string name="availabilities">Table Availability</string>
+
+
+    <!--    spinner dropdown list-->
+    <string-array name="restaurant">
+        <item>Carrolls</item>
+        <item>Devitts Pub</item>
+        <item>Dicey\'s Garden Club</item>
+        <item>Dunnes Bar</item>
+        <item>The Temple Bar</item>
+    </string-array>
+
+    <string-array name="party_size">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="book_time">
+        <item>12:00</item>
+        <item>12:30</item>
+        <item>13:00</item>
+        <item>13:30</item>
+        <item>14:00</item>
+        <item>14:30</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>16:00</item>
+        <item>16:30</item>
+        <item>17:00</item>
+        <item>17:30</item>
+        <item>18:00</item>
+        <item>18:30</item>
+        <item>19:00</item>
+        <item>19:30</item>
+        <item>20:00</item>
+        <item>20:30</item>
+        <item>21:00</item>
+    </string-array>
+
+
+</resources>
