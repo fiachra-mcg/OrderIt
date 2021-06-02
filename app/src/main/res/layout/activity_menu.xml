@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:textAlignment="center">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="60dp"
+            tools:context=".Menu"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+            <!--            android:paddingTop="70dp"-->
+
+
+            <ImageView
+                android:id="@+id/homeLogo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:contentDescription="@string/logo"
+                android:src="@mipmap/ic_launcher"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/marker"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/roboto_light"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="false"
+                android:layout_marginTop="64dp"
+                android:gravity="center"
+                android:paddingTop="50dp"
+                android:text="@string/marker_title"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="90dp"
+                android:fontFamily="@font/roboto_light"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textStyle="italic"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/marker" />
+
+            <TextView
+                android:id="@+id/openingHours"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mCard1"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/roboto_light"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textStyle="italic"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mCard1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#D9FFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/openingHours">
+
+                <TextView
+                    android:id="@+id/drinks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/marker"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/drinks"
+                    android:textSize="30sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/openingHours" />
+
+                <TextView
+                    android:id="@+id/beer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drinks"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="55dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/drinks" />
+
+                <Button
+                    android:id="@+id/beerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="115dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/add_to_cart"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addquantity"
+                    android:background="@drawable/custom_button"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/ic_shopping_cart_black" />
+
+
+                <ImageButton
+                    android:id="@+id/addquantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="85dp"
+                    android:layout_marginStart="110dp"
+                    android:background="@drawable/plus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintStart_toEndOf="@+id/quantity"
+                    app:layout_constraintTop_toBottomOf="@+id/beer" />
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="85dp"
+                    android:layout_marginStart="80dp"
+                    android:gravity="center"
+                    android:text="@string/_1"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:fontFamily="@font/roboto_light"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintStart_toEndOf="@+id/subquantity"
+                    app:layout_constraintTop_toBottomOf="@+id/beer" />
+
+                <ImageButton
+                    android:id="@+id/subquantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="85dp"
+                    android:layout_toEndOf="@+id/quantity"
+                    android:background="@drawable/minus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/beer" />
+
+                <TextView
+                    android:id="@+id/beerPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="280dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_marginTop="85dp"
+                    android:text="@string/_5"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/beerButton"
+                    app:layout_constraintStart_toEndOf="@+id/addquantity" />
+
+                <View
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/beerButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    android:layout_marginTop="160dp"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0"/>
+
+                <TextView
+                    android:id="@+id/coke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="170dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/beerButton" />
+
+                <ImageButton
+                    android:id="@+id/cokeaddquantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginStart="110dp"
+                    android:background="@drawable/plus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintBottom_toTopOf="@+id/cokeButton"
+                    app:layout_constraintStart_toEndOf="@+id/cokequantity" />
+
+                <TextView
+                    android:id="@+id/cokequantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_toEndOf="@+id/cokesubquantity"
+                    android:gravity="center"
+                    android:text="@string/_1"
+                    android:fontFamily="@font/roboto_light"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintStart_toEndOf="@+id/cokesubquantity"
+                    app:layout_constraintTop_toBottomOf="@+id/coke" />
+
+                <ImageButton
+                    android:id="@+id/cokesubquantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/minus"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="200dp"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintTop_toBottomOf="@+id/coke"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/cokePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="280dp"
+                    android:layout_marginTop="200dp"
+                    android:text="@string/_3"
+                    android:fontFamily="@font/roboto_light"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/cokeButton"
+                    app:layout_constraintStart_toEndOf="@+id/cokeaddquantity" />
+
+                <Button
+                    android:id="@+id/cokeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="50dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_marginTop="230dp"
+                    android:text="@string/add_to_cart"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cokequantity"
+                    android:background="@drawable/custom_button"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/ic_shopping_cart_black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cokeButton"
+                    android:layout_marginTop="275dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0"/>
+
+                <TextView
+                    android:id="@+id/wine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="290dp"
+                    android:text=""
+                    android:fontFamily="@font/roboto_light"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cokeButton" />
+
+                <ImageButton
+                    android:id="@+id/wineaddquantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/plus"
+                    android:layout_marginTop="320dp"
+                    android:layout_marginStart="110dp"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintBottom_toTopOf="@+id/wineButton"
+                    app:layout_constraintStart_toEndOf="@+id/winequantity" />
+
+                <TextView
+                    android:id="@+id/winequantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_toEndOf="@+id/winesubquantity"
+                    android:layout_marginTop="320dp"
+                    android:layout_marginStart="80dp"
+                    android:gravity="center"
+                    android:text="@string/_1"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_light"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintStart_toEndOf="@+id/winesubquantity"
+                    app:layout_constraintTop_toBottomOf="@+id/wine" />
+
+                <ImageButton
+                    android:id="@+id/winesubquantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="50dp"
+                    android:background="@drawable/minus"
+                    android:contentDescription="@string/todo"
+                    android:layout_marginTop="320dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wine" />
+
+                <TextView
+                    android:id="@+id/winePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="280dp"
+                    android:text="@string/_5"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:layout_marginTop="320dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/wineButton"
+                    app:layout_constraintStart_toEndOf="@+id/wineaddquantity" />
+
+                <Button
+                    android:id="@+id/wineButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="50dp"
+                    android:text="@string/add_to_cart"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_marginTop="350dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/winesubquantity"
+                    android:background="@drawable/custom_button"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/ic_shopping_cart_black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wineButton"
+                    android:layout_marginTop="400dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mCard2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#D9FFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/mCard1">
+
+                <TextView
+                    android:id="@+id/starters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/marker"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/starters"
+                    android:textSize="30sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mCard1" />
+
+
+                <TextView
+                    android:id="@+id/soup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drinks"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="55dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/starters" />
+
+                <ImageButton
+                    android:id="@+id/soupAddQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/plus"
+                    android:layout_marginTop="85dp"
+                    android:layout_marginStart="110dp"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintBottom_toTopOf="@+id/soupButton"
+                    app:layout_constraintStart_toEndOf="@+id/soupQuantity" />
+
+                <TextView
+                    android:id="@+id/soupQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="85dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_marginStart="80dp"
+                    android:layout_toEndOf="@+id/soupSubquantity"
+                    android:gravity="center"
+                    android:text="@string/_1"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintStart_toEndOf="@+id/soupSubquantity"
+                    app:layout_constraintTop_toBottomOf="@+id/soup" />
+
+                <ImageButton
+                    android:id="@+id/soupSubquantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="85dp"
+                    android:background="@drawable/minus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/soup" />
+
+                <TextView
+                    android:id="@+id/soupPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="280dp"
+                    android:layout_marginTop="85dp"
+                    android:text="@string/_6"
+                    android:fontFamily="@font/roboto_light"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/soupButton"
+                    app:layout_constraintStart_toEndOf="@+id/soupAddQuantity" />
+
+                <Button
+                    android:id="@+id/soupButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="115dp"
+                    android:text="@string/add_to_cart"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/soupSubquantity"
+                    android:background="@drawable/custom_button"
+                    android:drawableEnd="@drawable/ic_shopping_cart_black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/soupButton"
+                    android:layout_marginTop="160dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0"/>
+
+
+                <TextView
+                    android:id="@+id/chickenWings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drinks"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="170dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mainCourse" />
+
+                <ImageButton
+                    android:id="@+id/chickenWingsAddQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginStart="110dp"
+                    android:background="@drawable/plus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintBottom_toTopOf="@+id/chickenWingsButton"
+                    app:layout_constraintStart_toEndOf="@+id/chickenWingsQuantity" />
+
+                <TextView
+                    android:id="@+id/chickenWingsQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_toEndOf="@+id/winesubquantity"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/_1"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintStart_toEndOf="@+id/chickenWingsSubQuantity"
+                    app:layout_constraintTop_toBottomOf="@+id/chickenWings" />
+
+                <ImageButton
+                    android:id="@+id/chickenWingsSubQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="200dp"
+                    android:background="@drawable/minus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chickenWings" />
+
+                <TextView
+                    android:id="@+id/chickenWingsPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="280dp"
+                    android:layout_marginTop="200dp"
+                    android:text="@string/_8"
+                    android:fontFamily="@font/roboto_light"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/chickenWingsButton"
+                    app:layout_constraintStart_toEndOf="@+id/chickenWingsAddQuantity" />
+
+                <Button
+                    android:id="@+id/chickenWingsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="230dp"
+                    android:text="@string/add_to_cart"
+                    android:fontFamily="@font/roboto_light"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chickenWingsSubQuantity"
+                    android:background="@drawable/custom_button"
+                    android:drawableEnd="@drawable/ic_shopping_cart_black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chickenWingsButton"
+                    android:layout_marginTop="275dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0"/>
+
+                <TextView
+                    android:id="@+id/salad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drinks"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="290dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chickenWingsButton" />
+
+                <ImageButton
+                    android:id="@+id/saladAddQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="320dp"
+                    android:layout_marginStart="110dp"
+                    android:background="@drawable/plus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintBottom_toTopOf="@+id/saladButton"
+                    app:layout_constraintStart_toEndOf="@+id/saladQuantity" />
+
+                <TextView
+                    android:id="@+id/saladQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="320dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_toEndOf="@+id/saladSubQuantity"
+                    android:gravity="center"
+                    android:text="@string/_1"
+                    android:fontFamily="@font/roboto_light"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintStart_toEndOf="@+id/saladSubQuantity"
+                    app:layout_constraintTop_toBottomOf="@+id/salad" />
+
+                <ImageButton
+                    android:id="@+id/saladSubQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="320dp"
+                    android:background="@drawable/minus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/salad" />
+
+                <TextView
+                    android:id="@+id/saladPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="280dp"
+                    android:layout_marginTop="320dp"
+                    android:text="@string/_7"
+                    android:fontFamily="@font/roboto_light"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/saladButton"
+                    app:layout_constraintStart_toEndOf="@+id/saladAddQuantity" />
+
+                <Button
+                    android:id="@+id/saladButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="350dp"
+                    android:text="@string/add_to_cart"
+                    android:fontFamily="@font/roboto_light"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/saladSubQuantity"
+                    android:background="@drawable/custom_button"
+                    android:drawableEnd="@drawable/ic_shopping_cart_black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/saladButton"
+                    android:layout_marginTop="400dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mCard3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#D9FFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/mCard2">
+
+                <TextView
+                    android:id="@+id/mainCourse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/marker"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/main_course"
+                    android:fontFamily="@font/roboto_light"
+                    android:textSize="30sp"
+                    android:textColor="@color/black"
+                    android:textStyle="italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mCard2" />
+
+                <TextView
+                    android:id="@+id/steak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drinks"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="55dp"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:fontFamily="@font/roboto_light"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mainCourse" />
+
+                <ImageButton
+                    android:id="@+id/steakAddQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="85dp"
+                    android:layout_marginStart="110dp"
+                    android:background="@drawable/plus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintBottom_toTopOf="@+id/steakButton"
+                    app:layout_constraintStart_toEndOf="@+id/steakQuantity" />
+
+                <TextView
+                    android:id="@+id/steakQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="85dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_marginStart="80dp"
+                    android:layout_toEndOf="@+id/steakSubQuantity"
+                    android:gravity="center"
+                    android:text="@string/_1"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintStart_toEndOf="@+id/steakSubQuantity"
+                    app:layout_constraintTop_toBottomOf="@+id/steak" />
+
+                <ImageButton
+                    android:id="@+id/steakSubQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="85dp"
+                    android:background="@drawable/minus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/steak" />
+
+                <TextView
+                    android:id="@+id/steakPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="280dp"
+                    android:layout_marginTop="85dp"
+                    android:text="@string/_10"
+                    android:fontFamily="@font/roboto_light"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/steakButton"
+                    app:layout_constraintStart_toEndOf="@+id/steakAddQuantity" />
+
+                <Button
+                    android:id="@+id/steakButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="115dp"
+                    android:text="@string/add_to_cart"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/roboto_light"
+                    app:layout_constraintTop_toBottomOf="@+id/steakSubQuantity"
+                    android:background="@drawable/custom_button"
+                    android:drawableEnd="@drawable/ic_shopping_cart_black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/steakButton"
+                    android:layout_marginTop="160dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0"/>
+
+                <TextView
+                    android:id="@+id/chickenCurry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drinks"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="50dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:layout_marginTop="170dp"
+                    android:text=""
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/steakButton" />
+
+                <ImageButton
+                    android:id="@+id/chickenCurryAddQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginStart="110dp"
+                    android:background="@drawable/plus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintBottom_toTopOf="@+id/chickenCurryButton"
+                    app:layout_constraintStart_toEndOf="@+id/chickenCurryQuantity" />
+
+                <TextView
+                    android:id="@+id/chickenCurryQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_toEndOf="@+id/chickenCurrySubQuantity"
+                    android:gravity="center"
+                    android:text="@string/_1"
+                    android:fontFamily="@font/roboto_light"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintStart_toEndOf="@+id/chickenCurrySubQuantity"
+                    app:layout_constraintTop_toBottomOf="@+id/chickenCurry" />
+
+                <ImageButton
+                    android:id="@+id/chickenCurrySubQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="200dp"
+                    android:background="@drawable/minus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chickenCurry" />
+
+                <TextView
+                    android:id="@+id/chickenCurryPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="280dp"
+                    android:layout_marginTop="200dp"
+                    android:text="@string/_10"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/roboto_light"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/chickenCurryButton"
+                    app:layout_constraintStart_toEndOf="@+id/chickenCurryAddQuantity" />
+
+                <Button
+                    android:id="@+id/chickenCurryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="230dp"
+                    android:text="@string/add_to_cart"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chickenCurrySubQuantity"
+                    android:background="@drawable/custom_button"
+                    android:drawableEnd="@drawable/ic_shopping_cart_black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chickenCurryButton"
+                    android:layout_marginTop="275dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0"/>
+
+                <TextView
+                    android:id="@+id/lasagna"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drinks"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="290dp"
+                    android:text=""
+                    android:fontFamily="@font/roboto_light"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chickenCurryButton" />
+
+                <ImageButton
+                    android:id="@+id/lasagnaAddQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="320dp"
+                    android:layout_marginStart="110dp"
+                    android:background="@drawable/plus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintBottom_toTopOf="@+id/lasagnaButton"
+                    app:layout_constraintStart_toEndOf="@+id/lasagnaQuantity" />
+
+                <TextView
+                    android:id="@+id/lasagnaQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="320dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_toEndOf="@+id/lasagnaSubQuantity"
+                    android:gravity="center"
+                    android:text="@string/_1"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:fontFamily="@font/roboto_light"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/lasagnaSubQuantity"
+                    app:layout_constraintTop_toBottomOf="@+id/lasagna" />
+
+                <ImageButton
+                    android:id="@+id/lasagnaSubQuantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="320dp"
+                    android:background="@drawable/minus"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lasagna" />
+
+                <TextView
+                    android:id="@+id/lasagnaPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="280dp"
+                    android:layout_marginTop="320dp"
+                    android:text="@string/_10"
+                    android:fontFamily="@font/roboto_light"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/lasagnaButton"
+                    app:layout_constraintStart_toEndOf="@+id/lasagnaAddQuantity" />
+
+                <Button
+                    android:id="@+id/lasagnaButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="350dp"
+                    android:text="@string/add_to_cart"
+                    android:fontFamily="@font/roboto_light"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lasagnaSubQuantity"
+                    android:background="@drawable/custom_button"
+                    android:drawableEnd="@drawable/ic_shopping_cart_black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lasagnaButton"
+                    android:layout_marginTop="400dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mCard4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#D9FFFFFF"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/mCard3">
+
+            <TextView
+                android:id="@+id/dessert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/marker"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/dessert"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="30sp"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mCard3" />
+
+            <TextView
+                android:id="@+id/cheeseCake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/drinks"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="55dp"
+                android:fontFamily="@font/roboto_light"
+                android:text=""
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dessert" />
+
+            <ImageButton
+                android:id="@+id/cheeseCakeAddQuantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="85dp"
+                android:layout_marginStart="110dp"
+                android:background="@drawable/plus"
+                android:contentDescription="@string/todo"
+                app:layout_constraintBottom_toTopOf="@+id/cheeseCakeButton"
+                app:layout_constraintStart_toEndOf="@+id/cheeseCakeQuantity" />
+
+            <TextView
+                android:id="@+id/cheeseCakeQuantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="85dp"
+                android:fontFamily="@font/roboto_light"
+                android:layout_marginStart="80dp"
+                android:layout_toEndOf="@+id/cheeseCakeSubQuantity"
+                android:gravity="center"
+                android:text="@string/_1"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/cheeseCakeSubQuantity"
+                app:layout_constraintTop_toBottomOf="@+id/cheeseCake" />
+
+            <ImageButton
+                android:id="@+id/cheeseCakeSubQuantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="85dp"
+                android:background="@drawable/minus"
+                android:contentDescription="@string/todo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cheeseCake" />
+
+            <TextView
+                android:id="@+id/cheeseCakePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="85dp"
+                android:text="@string/_10"
+                android:fontFamily="@font/roboto_light"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/cheeseCakeButton"
+                app:layout_constraintStart_toEndOf="@+id/cheeseCakeAddQuantity" />
+
+            <Button
+                android:id="@+id/cheeseCakeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="115dp"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cheeseCakeSubQuantity"
+                android:background="@drawable/custom_button"
+                android:drawableEnd="@drawable/ic_shopping_cart_black"/>
+
+            <View
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/cheeseCakeButton"
+                android:layout_marginTop="160dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+
+            <TextView
+                android:id="@+id/chocolateBrownie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="170dp"
+                android:fontFamily="@font/roboto_light"
+                android:text=""
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cheeseCakeButton" />
+
+            <ImageButton
+                android:id="@+id/chocolateBrownieAddQuantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="200dp"
+                android:layout_marginStart="110dp"
+                android:background="@drawable/plus"
+                android:contentDescription="@string/todo"
+                app:layout_constraintBottom_toTopOf="@+id/chocolateBrownieButton"
+                app:layout_constraintStart_toEndOf="@+id/chocolateBrownieQuantity" />
+
+            <TextView
+                android:id="@+id/chocolateBrownieQuantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="200dp"
+                android:layout_marginStart="80dp"
+                android:layout_toEndOf="@+id/cheeseCakeSubQuantity"
+                android:gravity="center"
+                android:text="@string/_1"
+                android:fontFamily="@font/roboto_light"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/chocolateBrownieSubQuantity"
+                app:layout_constraintTop_toBottomOf="@+id/chocolateBrownie" />
+
+            <ImageButton
+                android:id="@+id/chocolateBrownieSubQuantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/minus"
+                android:contentDescription="@string/todo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chocolateBrownie" />
+
+            <TextView
+                android:id="@+id/chocolateBrowniePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="200dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/_10"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/chocolateBrownieButton"
+                app:layout_constraintStart_toEndOf="@+id/chocolateBrownieAddQuantity" />
+
+
+            <Button
+                android:id="@+id/chocolateBrownieButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="230dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chocolateBrownieSubQuantity"
+                android:background="@drawable/custom_button"
+                android:drawableEnd="@drawable/ic_shopping_cart_black"/>
+
+            <View
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/chocolateBrownieButton"
+                android:layout_marginTop="275dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"/>
+
+            <TextView
+                android:id="@+id/iceCream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/drinks"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/roboto_light"
+                android:layout_marginTop="290dp"
+                android:text=""
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chocolateBrownieButton" />
+
+            <ImageButton
+                android:id="@+id/iceCreamAddQuantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="320dp"
+                android:layout_marginStart="110dp"
+                android:background="@drawable/plus"
+                android:contentDescription="@string/todo"
+                app:layout_constraintBottom_toTopOf="@+id/iceCreamButton"
+                app:layout_constraintStart_toEndOf="@+id/iceCreamQuantity" />
+
+            <TextView
+                android:id="@+id/iceCreamQuantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="320dp"
+                android:layout_marginStart="80dp"
+                android:fontFamily="@font/roboto_light"
+                android:layout_toEndOf="@+id/cheeseCakeSubQuantity"
+                android:gravity="center"
+                android:text="@string/_1"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/iceCreamSubQuantity"
+                app:layout_constraintTop_toBottomOf="@+id/iceCream" />
+
+            <ImageButton
+                android:id="@+id/iceCreamSubQuantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="320dp"
+                android:background="@drawable/minus"
+                android:contentDescription="@string/todo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iceCream" />
+
+            <TextView
+                android:id="@+id/iceCreamPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="320dp"
+                android:text="@string/_10"
+                android:textAlignment="center"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/iceCreamButton"
+                app:layout_constraintStart_toEndOf="@+id/iceCreamAddQuantity" />
+
+            <Button
+                android:id="@+id/iceCreamButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="350dp"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iceCreamSubQuantity"
+                tools:ignore="TooManyViews"
+                android:background="@drawable/custom_button"
+                android:drawableEnd="@drawable/ic_shopping_cart_black"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wineButton"
+                    android:layout_marginTop="400dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/header" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/footer" />
+
+</RelativeLayout>
